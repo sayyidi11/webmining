@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. SOAL NOMER 2 &#8212; Web Mining</title>
+    <title>SOAL NOMER 2 &#8212; Web Mining</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,9 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="SOAL NOMER 1 K-Means Data Tweet" href="notebooks.html" />
+    <link rel="prev" title="UTS" href="notebooks.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -112,22 +114,15 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
+        <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks.html">
-   SOAL NOMER 1 K-Means Data Tweet
+   UTS
   </a>
  </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
- <span class="caption-text">
-  Part 2
- </span>
-</p>
-<ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   1. SOAL NOMER 2
+   SOAL NOMER 2
   </a>
  </li>
 </ul>
@@ -338,22 +333,22 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   1. SOAL NOMER 2
+   SOAL NOMER 2
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#masukkan-url-berita-yang-akan-dicrawling">
-   2. Masukkan Url Berita yang Akan dicrawling
+   Masukkan Url Berita yang Akan dicrawling
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lakukan-crawling-dan-tampilkan-hasilnya">
-   3. Lakukan Crawling dan Tampilkan Hasilnya
+   Lakukan Crawling dan Tampilkan Hasilnya
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tahpah-pre-prosesing-data">
-   4. TAHPAH PRE-PROSESING DATA
+   TAHPAH PRE-PROSESING DATA
   </a>
  </li>
 </ul>
@@ -377,22 +372,22 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   1. SOAL NOMER 2
+   SOAL NOMER 2
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#masukkan-url-berita-yang-akan-dicrawling">
-   2. Masukkan Url Berita yang Akan dicrawling
+   Masukkan Url Berita yang Akan dicrawling
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#lakukan-crawling-dan-tampilkan-hasilnya">
-   3. Lakukan Crawling dan Tampilkan Hasilnya
+   Lakukan Crawling dan Tampilkan Hasilnya
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#tahpah-pre-prosesing-data">
-   4. TAHPAH PRE-PROSESING DATA
+   TAHPAH PRE-PROSESING DATA
   </a>
  </li>
 </ul>
@@ -406,7 +401,7 @@ title="Print to PDF"
               <div>
                 
   <section class="tex2jax_ignore mathjax_ignore" id="soal-nomer-2">
-<h1><span class="section-number">1. </span>SOAL NOMER 2<a class="headerlink" href="#soal-nomer-2" title="Permalink to this headline">#</a></h1>
+<h1>SOAL NOMER 2<a class="headerlink" href="#soal-nomer-2" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">trafilatura</span>
@@ -416,23 +411,23 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
 Requirement already satisfied: trafilatura in /usr/local/lib/python3.7/dist-packages (1.4.0)
-Requirement already satisfied: lxml&gt;=4.6.4 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (4.9.1)
+Requirement already satisfied: charset-normalizer&gt;=2.1.1 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (2.1.1)
+Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from trafilatura) (2022.9.24)
+Requirement already satisfied: courlan&gt;=0.8.3 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (0.8.3)
+Requirement already satisfied: htmldate&gt;=1.3.2 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (1.3.2)
+Requirement already satisfied: justext&gt;=3.0.0 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (3.0.0)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting urllib3&lt;2,&gt;=1.26
   Using cached urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
-Requirement already satisfied: charset-normalizer&gt;=2.1.1 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (2.1.1)
-Requirement already satisfied: justext&gt;=3.0.0 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (3.0.0)
-Requirement already satisfied: htmldate&gt;=1.3.2 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (1.3.2)
-Requirement already satisfied: courlan&gt;=0.8.3 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (0.8.3)
-Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from trafilatura) (2022.9.24)
+Requirement already satisfied: lxml&gt;=4.6.4 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (4.9.1)
 Requirement already satisfied: tld&gt;=0.12.6 in /usr/local/lib/python3.7/dist-packages (from courlan&gt;=0.8.3-&gt;trafilatura) (0.12.6)
 Requirement already satisfied: langcodes&gt;=3.3.0 in /usr/local/lib/python3.7/dist-packages (from courlan&gt;=0.8.3-&gt;trafilatura) (3.3.0)
-Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.7/dist-packages (from htmldate&gt;=1.3.2-&gt;trafilatura) (2.8.2)
 Requirement already satisfied: dateparser&gt;=1.1.1 in /usr/local/lib/python3.7/dist-packages (from htmldate&gt;=1.3.2-&gt;trafilatura) (1.1.1)
-Requirement already satisfied: pytz in /usr/local/lib/python3.7/dist-packages (from dateparser&gt;=1.1.1-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (2022.4)
-Requirement already satisfied: tzlocal in /usr/local/lib/python3.7/dist-packages (from dateparser&gt;=1.1.1-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (1.5.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.7/dist-packages (from htmldate&gt;=1.3.2-&gt;trafilatura) (2.8.2)
 Requirement already satisfied: regex!=2019.02.19,!=2021.8.27,&lt;2022.3.15 in /usr/local/lib/python3.7/dist-packages (from dateparser&gt;=1.1.1-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (2022.3.2)
+Requirement already satisfied: tzlocal in /usr/local/lib/python3.7/dist-packages (from dateparser&gt;=1.1.1-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (1.5.1)
+Requirement already satisfied: pytz in /usr/local/lib/python3.7/dist-packages (from dateparser&gt;=1.1.1-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (2022.4)
 Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.8.2-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (1.15.0)
 </pre></div>
 </div>
@@ -460,7 +455,7 @@ Successfully installed urllib3-1.26.12
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="masukkan-url-berita-yang-akan-dicrawling">
-<h1><span class="section-number">2. </span>Masukkan Url Berita yang Akan dicrawling<a class="headerlink" href="#masukkan-url-berita-yang-akan-dicrawling" title="Permalink to this headline">#</a></h1>
+<h1>Masukkan Url Berita yang Akan dicrawling<a class="headerlink" href="#masukkan-url-berita-yang-akan-dicrawling" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">downloaded</span> <span class="o">=</span> <span class="n">trafilatura</span><span class="o">.</span><span class="n">fetch_url</span><span class="p">(</span><span class="s1">&#39;https://bola.tempo.co/read/1643935/alami-cedera-luis-diaz-tak-perkuat-liverpool-hingga-piala-dunia-2022&#39;</span><span class="p">)</span>
@@ -470,7 +465,7 @@ Successfully installed urllib3-1.26.12
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="lakukan-crawling-dan-tampilkan-hasilnya">
-<h1><span class="section-number">3. </span>Lakukan Crawling dan Tampilkan Hasilnya<a class="headerlink" href="#lakukan-crawling-dan-tampilkan-hasilnya" title="Permalink to this headline">#</a></h1>
+<h1>Lakukan Crawling dan Tampilkan Hasilnya<a class="headerlink" href="#lakukan-crawling-dan-tampilkan-hasilnya" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">downloaded</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -495,7 +490,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 </div>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="tahpah-pre-prosesing-data">
-<h1><span class="section-number">4. </span>TAHPAH PRE-PROSESING DATA<a class="headerlink" href="#tahpah-pre-prosesing-data" title="Permalink to this headline">#</a></h1>
+<h1>TAHPAH PRE-PROSESING DATA<a class="headerlink" href="#tahpah-pre-prosesing-data" title="Permalink to this headline">#</a></h1>
 <p>Pada tahap ini akan dilakukan pengolahan data mentah menjadi data siap pakai, antara lain yang akan dilakukan adalah:</p>
 <ul class="simple">
 <li><p>Tahap Case Folfding dll</p></li>
@@ -543,7 +538,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-85a1072e-cbb9-49cc-abcd-f60d1351723d">
+  <div id="df-2bdb440c-6977-4c01-bf6e-955fcef021fd">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -574,7 +569,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-85a1072e-cbb9-49cc-abcd-f60d1351723d')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-2bdb440c-6977-4c01-bf6e-955fcef021fd')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -625,12 +620,12 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 
       <script>
         const buttonEl =
-          document.querySelector('#df-85a1072e-cbb9-49cc-abcd-f60d1351723d button.colab-df-convert');
+          document.querySelector('#df-2bdb440c-6977-4c01-bf6e-955fcef021fd button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-85a1072e-cbb9-49cc-abcd-f60d1351723d');
+          const element = document.querySelector('#df-2bdb440c-6977-4c01-bf6e-955fcef021fd');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -671,7 +666,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-340d5775-51bc-4cca-bde3-3faa7dbddf01">
+  <div id="df-3d453365-ab8f-4d89-8cf3-5713cf59408b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -790,7 +785,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-340d5775-51bc-4cca-bde3-3faa7dbddf01')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-3d453365-ab8f-4d89-8cf3-5713cf59408b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -841,12 +836,12 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 
       <script>
         const buttonEl =
-          document.querySelector('#df-340d5775-51bc-4cca-bde3-3faa7dbddf01 button.colab-df-convert');
+          document.querySelector('#df-3d453365-ab8f-4d89-8cf3-5713cf59408b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-340d5775-51bc-4cca-bde3-3faa7dbddf01');
+          const element = document.querySelector('#df-3d453365-ab8f-4d89-8cf3-5713cf59408b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -891,7 +886,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-f9e33530-6fe0-4686-86a0-1a860c5721c1">
+  <div id="df-1f300157-699c-489a-b003-08820dd49aca">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1010,7 +1005,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f9e33530-6fe0-4686-86a0-1a860c5721c1')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1f300157-699c-489a-b003-08820dd49aca')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1061,12 +1056,12 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f9e33530-6fe0-4686-86a0-1a860c5721c1 button.colab-df-convert');
+          document.querySelector('#df-1f300157-699c-489a-b003-08820dd49aca button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f9e33530-6fe0-4686-86a0-1a860c5721c1');
+          const element = document.querySelector('#df-1f300157-699c-489a-b003-08820dd49aca');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1119,7 +1114,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-46df8986-3516-43db-bd11-c2de7ce563b5">
+  <div id="df-1af4025b-2618-4787-9690-b0e9ab0e2ddc">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1238,7 +1233,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-46df8986-3516-43db-bd11-c2de7ce563b5')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-1af4025b-2618-4787-9690-b0e9ab0e2ddc')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1289,12 +1284,12 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 
       <script>
         const buttonEl =
-          document.querySelector('#df-46df8986-3516-43db-bd11-c2de7ce563b5 button.colab-df-convert');
+          document.querySelector('#df-1af4025b-2618-4787-9690-b0e9ab0e2ddc button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-46df8986-3516-43db-bd11-c2de7ce563b5');
+          const element = document.querySelector('#df-1af4025b-2618-4787-9690-b0e9ab0e2ddc');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1574,7 +1569,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ea8f5dd9-b7ef-45d6-9331-cca65c311049">
+  <div id="df-71f2b37e-2355-431a-a75b-8f886de74c0c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -1607,7 +1602,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-ea8f5dd9-b7ef-45d6-9331-cca65c311049')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-71f2b37e-2355-431a-a75b-8f886de74c0c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -1658,12 +1653,12 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
 
       <script>
         const buttonEl =
-          document.querySelector('#df-ea8f5dd9-b7ef-45d6-9331-cca65c311049 button.colab-df-convert');
+          document.querySelector('#df-71f2b37e-2355-431a-a75b-8f886de74c0c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-ea8f5dd9-b7ef-45d6-9331-cca65c311049');
+          const element = document.querySelector('#df-71f2b37e-2355-431a-a75b-8f886de74c0c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -1717,7 +1712,7 @@ Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pe
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">SOAL NOMER 1 K-Means Data Tweet</p>
+            <p class="prev-next-title">UTS</p>
         </div>
     </a>
 </div>
