@@ -1,0 +1,1743 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>SOAL NOMER 2 &#8212; Web Mining</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="SOAL NOMER 1 K-Means Data Tweet" href="notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Web Mining</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Welcome to your Jupyter Book
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   SOAL NOMER 1 K-Means Data Tweet
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   SOAL NOMER 2
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/sayyidi11/webmining/blob/master/docs/UTS_2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/sayyidi11/webmining"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/sayyidi11/webmining/issues/new?title=Issue%20on%20page%20%2FUTS_2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="_sources/UTS_2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   SOAL NOMER 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#masukkan-url-berita-yang-akan-dicrawling">
+   Masukkan Url Berita yang Akan dicrawling
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lakukan-crawling-dan-tampilkan-hasilnya">
+   Lakukan Crawling dan Tampilkan Hasilnya
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tahpah-pre-prosesing-data">
+   TAHPAH PRE-PROSESING DATA
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>SOAL NOMER 2</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   SOAL NOMER 2
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#masukkan-url-berita-yang-akan-dicrawling">
+   Masukkan Url Berita yang Akan dicrawling
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#lakukan-crawling-dan-tampilkan-hasilnya">
+   Lakukan Crawling dan Tampilkan Hasilnya
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tahpah-pre-prosesing-data">
+   TAHPAH PRE-PROSESING DATA
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="soal-nomer-2">
+<h1>SOAL NOMER 2<a class="headerlink" href="#soal-nomer-2" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">trafilatura</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Looking in indexes: https://pypi.org/simple, https://us-python.pkg.dev/colab-wheels/public/simple/
+Requirement already satisfied: trafilatura in /usr/local/lib/python3.7/dist-packages (1.4.0)
+Requirement already satisfied: certifi in /usr/local/lib/python3.7/dist-packages (from trafilatura) (2022.9.24)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting urllib3&lt;2,&gt;=1.26
+  Using cached urllib3-1.26.12-py2.py3-none-any.whl (140 kB)
+Requirement already satisfied: charset-normalizer&gt;=2.1.1 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (2.1.1)
+Requirement already satisfied: lxml&gt;=4.6.4 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (4.9.1)
+Requirement already satisfied: htmldate&gt;=1.3.2 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (1.3.2)
+Requirement already satisfied: justext&gt;=3.0.0 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (3.0.0)
+Requirement already satisfied: courlan&gt;=0.8.3 in /usr/local/lib/python3.7/dist-packages (from trafilatura) (0.8.3)
+Requirement already satisfied: tld&gt;=0.12.6 in /usr/local/lib/python3.7/dist-packages (from courlan&gt;=0.8.3-&gt;trafilatura) (0.12.6)
+Requirement already satisfied: langcodes&gt;=3.3.0 in /usr/local/lib/python3.7/dist-packages (from courlan&gt;=0.8.3-&gt;trafilatura) (3.3.0)
+Requirement already satisfied: dateparser&gt;=1.1.1 in /usr/local/lib/python3.7/dist-packages (from htmldate&gt;=1.3.2-&gt;trafilatura) (1.1.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.2 in /usr/local/lib/python3.7/dist-packages (from htmldate&gt;=1.3.2-&gt;trafilatura) (2.8.2)
+Requirement already satisfied: tzlocal in /usr/local/lib/python3.7/dist-packages (from dateparser&gt;=1.1.1-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (1.5.1)
+Requirement already satisfied: regex!=2019.02.19,!=2021.8.27,&lt;2022.3.15 in /usr/local/lib/python3.7/dist-packages (from dateparser&gt;=1.1.1-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (2022.3.2)
+Requirement already satisfied: pytz in /usr/local/lib/python3.7/dist-packages (from dateparser&gt;=1.1.1-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (2022.4)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.7/dist-packages (from python-dateutil&gt;=2.8.2-&gt;htmldate&gt;=1.3.2-&gt;trafilatura) (1.15.0)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: urllib3
+  Attempting uninstall: urllib3
+    Found existing installation: urllib3 1.25.11
+    Uninstalling urllib3-1.25.11:
+      Successfully uninstalled urllib3-1.25.11
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Red">ERROR: pip&#39;s dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.</span>
+<span class=" -Color -Color-Red">requests 2.23.0 requires urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1, but you have urllib3 1.26.12 which is incompatible.</span>
+<span class=" -Color -Color-Red">google-colab 1.0.0 requires tornado~=5.1.0, but you have tornado 6.2 which is incompatible.</span>
+Successfully installed urllib3-1.26.12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">trafilatura</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="masukkan-url-berita-yang-akan-dicrawling">
+<h1>Masukkan Url Berita yang Akan dicrawling<a class="headerlink" href="#masukkan-url-berita-yang-akan-dicrawling" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">downloaded</span> <span class="o">=</span> <span class="n">trafilatura</span><span class="o">.</span><span class="n">fetch_url</span><span class="p">(</span><span class="s1">&#39;https://bola.tempo.co/read/1643935/alami-cedera-luis-diaz-tak-perkuat-liverpool-hingga-piala-dunia-2022&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="lakukan-crawling-dan-tampilkan-hasilnya">
+<h1>Lakukan Crawling dan Tampilkan Hasilnya<a class="headerlink" href="#lakukan-crawling-dan-tampilkan-hasilnya" title="Permalink to this headline">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">downloaded</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+   <span class="n">result</span> <span class="o">=</span> <span class="n">trafilatura</span><span class="o">.</span><span class="n">extract</span><span class="p">(</span><span class="n">downloaded</span><span class="p">)</span>
+   <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>TEMPO.CO, Jakarta - Liverpool mendapat pukulan keras usai kalah dari Arsenal dalam laga lanjutan Liga Inggris, Ahad kemarin. The Reds harus kehilangan pemain sayap, Luis Diaz, karena mengalami cedera.
+Pemain asal Kolombia yang musim ini punya peran penting di skuad Jurgen Klopp harus meninggalkan lapangan dengan menggunakan penyangga. Dalam laga melawan Arsenal, Diaz harus meninggalkan lapangan setelah duel dengan Thomas Partey. Ia kemudian digantikan oleh Roberto Firmino.
+Menurut laporan Liverpool, Luis Diaz tidak akan kembali dari cedera sampai setelah Piala Dunia 2022. Selain Luiz Diaz, ada juga Trent Alexander-Arnold yang juga berpeluang absen karena cedera engkel di laga yang sama.
+&quot;Cedera Trent juga buruk, di engkelnya. Engkelnya terkilir dan itu tidak bagus. Trent tidak pernah diganti selama tujuh tahun ini jika dia memang bisa lanjut. Dia kesakitan dan engkelnya mulai bengkak. Jadi kami harus lihat dulu,&quot; kata manajer Liverpool Jurgen Klopp di The Athletic.
+Luis Diaz bisa dibilang sebagai pemain terbaik Liverpool setelah klub ditinggalkan Sadio Mane. Pemain berusia 25 tahun itu mencatatkan tiga gol dan dua assist dalam delapan pertandingan pertamanya di Liga Inggris.
+Baca : Alasan Jurgen Klopp Tarik Keluar Mohamed Salah saat Arsenal vs Liverpool 3-2 di Liga Inggris
+Kini pekerjaan rumah Liverpool menjadi semakin berat setelah kehilangan Luiz Dias. Pasalnya, mereka akan menghadapi laga krusial melawan Manchester City dan Tottenham Hotspur di Liga Inggris. Sedangkan di Liga Champions, Liverpool akan menghadapi Rangers, Ajax dan Napoli di sisa laga fase grup.
+Kekalahan dari Arsenal membuat the Reds merana. Mohamed Salah dan kawan-kawan berselisih 14 poin di belakang Arsenal di klasemen Liga Inggris. Liverpool berada di peringkat 10 dengan 10 poin setelah melakoni delapan pertandingan. Ini merupakan awal terburuk Liverpool selama tujuh tahun kepemimpinan Klopp.
+Manchester City, yang berada di posisi kedua, akan bertandang ke Anfield pada pekan depan. Klopp hanya punya sedikit waktu untuk memperbaiki penampilan para pemainnya. “Kami belum harus melihat klasemen tetapi kami tahu di mana kami berada tanpa harus melihatnya, jadi kami belum selesai,” kata Klopp dikutip dari Skysports.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="tahpah-pre-prosesing-data">
+<h1>TAHPAH PRE-PROSESING DATA<a class="headerlink" href="#tahpah-pre-prosesing-data" title="Permalink to this headline">#</a></h1>
+<p>Pada tahap ini akan dilakukan pengolahan data mentah menjadi data siap pakai, antara lain yang akan dilakukan adalah:</p>
+<ul class="simple">
+<li><p>Tahap Case Folfding dll</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+<span class="n">result</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;tempo.co, jakarta - liverpool mendapat pukulan keras usai kalah dari arsenal dalam laga lanjutan liga inggris, ahad kemarin. the reds harus kehilangan pemain sayap, luis diaz, karena mengalami cedera.\npemain asal kolombia yang musim ini punya peran penting di skuad jurgen klopp harus meninggalkan lapangan dengan menggunakan penyangga. dalam laga melawan arsenal, diaz harus meninggalkan lapangan setelah duel dengan thomas partey. ia kemudian digantikan oleh roberto firmino.\nmenurut laporan liverpool, luis diaz tidak akan kembali dari cedera sampai setelah piala dunia 2022. selain luiz diaz, ada juga trent alexander-arnold yang juga berpeluang absen karena cedera engkel di laga yang sama.\n&quot;cedera trent juga buruk, di engkelnya. engkelnya terkilir dan itu tidak bagus. trent tidak pernah diganti selama tujuh tahun ini jika dia memang bisa lanjut. dia kesakitan dan engkelnya mulai bengkak. jadi kami harus lihat dulu,&quot; kata manajer liverpool jurgen klopp di the athletic.\nluis diaz bisa dibilang sebagai pemain terbaik liverpool setelah klub ditinggalkan sadio mane. pemain berusia 25 tahun itu mencatatkan tiga gol dan dua assist dalam delapan pertandingan pertamanya di liga inggris.\nbaca : alasan jurgen klopp tarik keluar mohamed salah saat arsenal vs liverpool 3-2 di liga inggris\nkini pekerjaan rumah liverpool menjadi semakin berat setelah kehilangan luiz dias. pasalnya, mereka akan menghadapi laga krusial melawan manchester city dan tottenham hotspur di liga inggris. sedangkan di liga champions, liverpool akan menghadapi rangers, ajax dan napoli di sisa laga fase grup.\nkekalahan dari arsenal membuat the reds merana. mohamed salah dan kawan-kawan berselisih 14 poin di belakang arsenal di klasemen liga inggris. liverpool berada di peringkat 10 dengan 10 poin setelah melakoni delapan pertandingan. ini merupakan awal terburuk liverpool selama tujuh tahun kepemimpinan klopp.\nmanchester city, yang berada di posisi kedua, akan bertandang ke anfield pada pekan depan. klopp hanya punya sedikit waktu untuk memperbaiki penampilan para pemainnya. “kami belum harus melihat klasemen tetapi kami tahu di mana kami berada tanpa harus melihatnya, jadi kami belum selesai,” kata klopp dikutip dari skysports.&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">result</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Berita_Asli&quot;</span><span class="p">:</span> <span class="p">[</span><span class="n">df</span><span class="p">]</span> <span class="p">}</span>
+<span class="n">data</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;Berita_Asli&#39;: [&#39;tempo.co, jakarta - liverpool mendapat pukulan keras usai kalah dari arsenal dalam laga lanjutan liga inggris, ahad kemarin. the reds harus kehilangan pemain sayap, luis diaz, karena mengalami cedera.\npemain asal kolombia yang musim ini punya peran penting di skuad jurgen klopp harus meninggalkan lapangan dengan menggunakan penyangga. dalam laga melawan arsenal, diaz harus meninggalkan lapangan setelah duel dengan thomas partey. ia kemudian digantikan oleh roberto firmino.\nmenurut laporan liverpool, luis diaz tidak akan kembali dari cedera sampai setelah piala dunia 2022. selain luiz diaz, ada juga trent alexander-arnold yang juga berpeluang absen karena cedera engkel di laga yang sama.\n&quot;cedera trent juga buruk, di engkelnya. engkelnya terkilir dan itu tidak bagus. trent tidak pernah diganti selama tujuh tahun ini jika dia memang bisa lanjut. dia kesakitan dan engkelnya mulai bengkak. jadi kami harus lihat dulu,&quot; kata manajer liverpool jurgen klopp di the athletic.\nluis diaz bisa dibilang sebagai pemain terbaik liverpool setelah klub ditinggalkan sadio mane. pemain berusia 25 tahun itu mencatatkan tiga gol dan dua assist dalam delapan pertandingan pertamanya di liga inggris.\nbaca : alasan jurgen klopp tarik keluar mohamed salah saat arsenal vs liverpool 3-2 di liga inggris\nkini pekerjaan rumah liverpool menjadi semakin berat setelah kehilangan luiz dias. pasalnya, mereka akan menghadapi laga krusial melawan manchester city dan tottenham hotspur di liga inggris. sedangkan di liga champions, liverpool akan menghadapi rangers, ajax dan napoli di sisa laga fase grup.\nkekalahan dari arsenal membuat the reds merana. mohamed salah dan kawan-kawan berselisih 14 poin di belakang arsenal di klasemen liga inggris. liverpool berada di peringkat 10 dengan 10 poin setelah melakoni delapan pertandingan. ini merupakan awal terburuk liverpool selama tujuh tahun kepemimpinan klopp.\nmanchester city, yang berada di posisi kedua, akan bertandang ke anfield pada pekan depan. klopp hanya punya sedikit waktu untuk memperbaiki penampilan para pemainnya. “kami belum harus melihat klasemen tetapi kami tahu di mana kami berada tanpa harus melihatnya, jadi kami belum selesai,” kata klopp dikutip dari skysports.&#39;]}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">berita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">berita</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-7fd8dc35-cf25-405d-a602-61ecf6e4c063">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Berita_Asli</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>tempo.co, jakarta - liverpool mendapat pukulan...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-7fd8dc35-cf25-405d-a602-61ecf6e4c063')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-7fd8dc35-cf25-405d-a602-61ecf6e4c063 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-7fd8dc35-cf25-405d-a602-61ecf6e4c063');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span>
+
+<span class="n">df_pisahkalimat</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df_pisahkalimat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">sent_tokenize</span><span class="p">(</span><span class="n">df_pisahkalimat</span><span class="p">[</span><span class="s2">&quot;Berita_Asli&quot;</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="n">df_pisahkalimat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">df_pisahkalimat</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;Berita_Asli&quot;</span><span class="p">])</span>
+<span class="n">df_pisahkalimat</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-5610fa16-e447-43fe-9056-67cc60793233">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Berita_Asli</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>tempo.co, jakarta - liverpool mendapat pukulan...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>the reds harus kehilangan pemain sayap, luis d...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>pemain asal kolombia yang musim ini punya pera...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>dalam laga melawan arsenal, diaz harus meningg...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ia kemudian digantikan oleh roberto firmino.</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>menurut laporan liverpool, luis diaz tidak aka...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>"cedera trent juga buruk, di engkelnya.</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>engkelnya terkilir dan itu tidak bagus.</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>trent tidak pernah diganti selama tujuh tahun ...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>dia kesakitan dan engkelnya mulai bengkak.</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>jadi kami harus lihat dulu," kata manajer live...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>luis diaz bisa dibilang sebagai pemain terbaik...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>pemain berusia 25 tahun itu mencatatkan tiga g...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>baca : alasan jurgen klopp tarik keluar mohame...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>pasalnya, mereka akan menghadapi laga krusial ...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>sedangkan di liga champions, liverpool akan me...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>kekalahan dari arsenal membuat the reds merana.</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>mohamed salah dan kawan-kawan berselisih 14 po...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>liverpool berada di peringkat 10 dengan 10 poi...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>ini merupakan awal terburuk liverpool selama t...</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>manchester city, yang berada di posisi kedua, ...</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>klopp hanya punya sedikit waktu untuk memperba...</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>“kami belum harus melihat klasemen tetapi kami...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-5610fa16-e447-43fe-9056-67cc60793233')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-5610fa16-e447-43fe-9056-67cc60793233 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-5610fa16-e447-43fe-9056-67cc60793233');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">string</span>
+<span class="n">df_casefolding</span> <span class="o">=</span> <span class="n">df_pisahkalimat</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="c1">#mengubah menjadi huruf kecil</span>
+<span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="c1">#menghapus tanda baca</span>
+<span class="n">tanda_baca</span> <span class="o">=</span> <span class="n">string</span><span class="o">.</span><span class="n">punctuation</span>
+<span class="n">tanda_baca</span> <span class="o">=</span> <span class="n">tanda_baca</span><span class="o">+</span><span class="s2">&quot;–&quot;</span>
+<span class="k">for</span> <span class="n">char</span> <span class="ow">in</span> <span class="n">tanda_baca</span><span class="p">:</span>
+    <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[\</span><span class="si">%s</span><span class="s1">]&#39;</span><span class="o">%</span><span class="k">char</span>,&quot; &quot;, regex=True)
+
+<span class="c1">#menghapus angka</span>
+<span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\d+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1">#menghapus karakter kosong</span>
+<span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">df_casefolding</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-9afc12a8-1b9e-4cba-affd-525728a0aa5d">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Berita_Asli</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>tempo co jakarta liverpool mendapat pukulan ke...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>the reds harus kehilangan pemain sayap luis di...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>pemain asal kolombia yang musim ini punya pera...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>dalam laga melawan arsenal diaz harus meningga...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>ia kemudian digantikan oleh roberto firmino</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>menurut laporan liverpool luis diaz tidak akan...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>cedera trent juga buruk di engkelnya</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>engkelnya terkilir dan itu tidak bagus</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>trent tidak pernah diganti selama tujuh tahun ...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>dia kesakitan dan engkelnya mulai bengkak</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>jadi kami harus lihat dulu kata manajer liverp...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>luis diaz bisa dibilang sebagai pemain terbaik...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>pemain berusia tahun itu mencatatkan tiga gol ...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>baca alasan jurgen klopp tarik keluar mohamed ...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>pasalnya mereka akan menghadapi laga krusial m...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>sedangkan di liga champions liverpool akan men...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>kekalahan dari arsenal membuat the reds merana</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>mohamed salah dan kawan kawan berselisih poin ...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>liverpool berada di peringkat dengan poin sete...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>ini merupakan awal terburuk liverpool selama t...</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>manchester city yang berada di posisi kedua ak...</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>klopp hanya punya sedikit waktu untuk memperba...</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>“kami belum harus melihat klasemen tetapi kami...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-9afc12a8-1b9e-4cba-affd-525728a0aa5d')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-9afc12a8-1b9e-4cba-affd-525728a0aa5d button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-9afc12a8-1b9e-4cba-affd-525728a0aa5d');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">nltk.tokenize</span> <span class="kn">import</span> <span class="n">sent_tokenize</span><span class="p">,</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span> <span class="nn">nltk.corpus</span> <span class="kn">import</span> <span class="n">stopwords</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s2">&quot;stopwords&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">listStopword</span> <span class="o">=</span>  <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">))</span>
+<span class="n">df_stopwords</span> <span class="o">=</span> <span class="n">df_casefolding</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span> 
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">listStopword</span><span class="p">:</span>
+    <span class="n">df_stopwords</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_stopwords</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\b</span><span class="si">%s</span><span class="s1">\b&#39;</span><span class="o">%</span><span class="k">i</span>, &#39;&#39;, regex=True)
+<span class="n">df_stopwords</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df_stopwords</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">regex</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">df_stopwords</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-30a12804-33af-41f4-af3d-4c146ac14889">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Berita_Asli</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>tempo co jakarta liverpool pukulan keras kalah...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>the reds kehilangan pemain sayap luis diaz men...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>pemain kolombia musim peran skuad jurgen klopp...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>laga melawan arsenal diaz meninggalkan lapang...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>digantikan roberto firmino</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>laporan liverpool luis diaz cedera piala duni...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>cedera trent buruk engkelnya</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>engkelnya terkilir bagus</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>trent diganti tujuh</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>kesakitan engkelnya bengkak</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>lihat manajer liverpool jurgen klopp the athl...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>luis diaz dibilang pemain terbaik liverpool kl...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>pemain berusia mencatatkan gol assist delapan ...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>baca alasan jurgen klopp tarik mohamed salah a...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>pasalnya menghadapi laga krusial melawan manch...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>liga champions liverpool menghadapi rangers a...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>kekalahan arsenal the reds merana</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>mohamed salah kawan kawan berselisih poin arse...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>liverpool peringkat poin melakoni delapan pert...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>terburuk liverpool tujuh kepemimpinan klopp</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>manchester city posisi bertandang anfield pekan</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>klopp memperbaiki penampilan pemainnya</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>“ klasemen selesai ” klopp dikutip skysports</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-30a12804-33af-41f4-af3d-4c146ac14889')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-30a12804-33af-41f4-af3d-4c146ac14889 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-30a12804-33af-41f4-af3d-4c146ac14889');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">CountVectorizer</span>
+<span class="n">cv</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
+<span class="n">cv_matrix</span> <span class="o">=</span> <span class="n">cv</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">df_casefolding</span><span class="p">[</span><span class="s1">&#39;Berita_Asli&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;Banyaknya kosa kata = &quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">((</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">())))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Banyaknya kosa kata =  190
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="p">(</span><span class="s2">&quot;kosa kata = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">cv</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>kosa kata =  [&#39;absen&#39; &#39;ada&#39; &#39;ahad&#39; &#39;ajax&#39; &#39;akan&#39; &#39;alasan&#39; &#39;alexander&#39; &#39;anfield&#39;
+ &#39;arnold&#39; &#39;arsenal&#39; &#39;asal&#39; &#39;assist&#39; &#39;athletic&#39; &#39;awal&#39; &#39;baca&#39; &#39;bagus&#39;
+ &#39;belakang&#39; &#39;belum&#39; &#39;bengkak&#39; &#39;berada&#39; &#39;berat&#39; &#39;berpeluang&#39; &#39;berselisih&#39;
+ &#39;bertandang&#39; &#39;berusia&#39; &#39;bisa&#39; &#39;buruk&#39; &#39;cedera&#39; &#39;champions&#39; &#39;city&#39; &#39;co&#39;
+ &#39;dalam&#39; &#39;dan&#39; &#39;dari&#39; &#39;delapan&#39; &#39;dengan&#39; &#39;depan&#39; &#39;di&#39; &#39;dia&#39; &#39;dias&#39; &#39;diaz&#39;
+ &#39;dibilang&#39; &#39;diganti&#39; &#39;digantikan&#39; &#39;dikutip&#39; &#39;ditinggalkan&#39; &#39;dua&#39; &#39;duel&#39;
+ &#39;dulu&#39; &#39;dunia&#39; &#39;engkel&#39; &#39;engkelnya&#39; &#39;fase&#39; &#39;firmino&#39; &#39;gol&#39; &#39;grup&#39; &#39;hanya&#39;
+ &#39;harus&#39; &#39;hotspur&#39; &#39;ia&#39; &#39;inggris&#39; &#39;ini&#39; &#39;itu&#39; &#39;jadi&#39; &#39;jakarta&#39; &#39;jika&#39;
+ &#39;juga&#39; &#39;jurgen&#39; &#39;kalah&#39; &#39;kami&#39; &#39;karena&#39; &#39;kata&#39; &#39;kawan&#39; &#39;ke&#39; &#39;kedua&#39;
+ &#39;kehilangan&#39; &#39;kekalahan&#39; &#39;keluar&#39; &#39;kemarin&#39; &#39;kembali&#39; &#39;kemudian&#39;
+ &#39;kepemimpinan&#39; &#39;keras&#39; &#39;kesakitan&#39; &#39;kini&#39; &#39;klasemen&#39; &#39;klopp&#39; &#39;klub&#39;
+ &#39;kolombia&#39; &#39;krusial&#39; &#39;laga&#39; &#39;lanjut&#39; &#39;lanjutan&#39; &#39;lapangan&#39; &#39;laporan&#39;
+ &#39;liga&#39; &#39;lihat&#39; &#39;liverpool&#39; &#39;luis&#39; &#39;luiz&#39; &#39;mana&#39; &#39;manajer&#39; &#39;manchester&#39;
+ &#39;mane&#39; &#39;melakoni&#39; &#39;melawan&#39; &#39;melihat&#39; &#39;melihatnya&#39; &#39;memang&#39; &#39;membuat&#39;
+ &#39;memperbaiki&#39; &#39;mencatatkan&#39; &#39;mendapat&#39; &#39;mengalami&#39; &#39;menggunakan&#39;
+ &#39;menghadapi&#39; &#39;meninggalkan&#39; &#39;menjadi&#39; &#39;menurut&#39; &#39;merana&#39; &#39;mereka&#39;
+ &#39;merupakan&#39; &#39;mohamed&#39; &#39;mulai&#39; &#39;musim&#39; &#39;napoli&#39; &#39;oleh&#39; &#39;pada&#39; &#39;para&#39;
+ &#39;partey&#39; &#39;pasalnya&#39; &#39;pekan&#39; &#39;pekerjaan&#39; &#39;pemain&#39; &#39;pemainnya&#39; &#39;penampilan&#39;
+ &#39;penting&#39; &#39;penyangga&#39; &#39;peran&#39; &#39;peringkat&#39; &#39;pernah&#39; &#39;pertamanya&#39;
+ &#39;pertandingan&#39; &#39;piala&#39; &#39;poin&#39; &#39;posisi&#39; &#39;pukulan&#39; &#39;punya&#39; &#39;rangers&#39; &#39;reds&#39;
+ &#39;roberto&#39; &#39;rumah&#39; &#39;saat&#39; &#39;sadio&#39; &#39;salah&#39; &#39;sama&#39; &#39;sampai&#39; &#39;sayap&#39;
+ &#39;sebagai&#39; &#39;sedangkan&#39; &#39;sedikit&#39; &#39;selain&#39; &#39;selama&#39; &#39;selesai&#39; &#39;semakin&#39;
+ &#39;setelah&#39; &#39;sisa&#39; &#39;skuad&#39; &#39;skysports&#39; &#39;tahu&#39; &#39;tahun&#39; &#39;tanpa&#39; &#39;tarik&#39;
+ &#39;tempo&#39; &#39;terbaik&#39; &#39;terburuk&#39; &#39;terkilir&#39; &#39;tetapi&#39; &#39;the&#39; &#39;thomas&#39; &#39;tidak&#39;
+ &#39;tiga&#39; &#39;tottenham&#39; &#39;trent&#39; &#39;tujuh&#39; &#39;untuk&#39; &#39;usai&#39; &#39;vs&#39; &#39;waktu&#39; &#39;yang&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span>
+<span class="n">normal_matrix</span> <span class="o">=</span> <span class="n">TfidfTransformer</span><span class="p">()</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">cv_matrix</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span><span class="o">.</span><span class="n">toarray</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0.         0.         0.26421182 ... 0.         0.         0.        ]
+ [0.         0.         0.         ... 0.         0.         0.        ]
+ [0.         0.         0.         ... 0.         0.         0.21004456]
+ ...
+ [0.         0.         0.         ... 0.         0.         0.23518342]
+ [0.         0.         0.         ... 0.         0.32984979 0.        ]
+ [0.         0.         0.         ... 0.         0.         0.        ]]
+&lt;bound method _cs_matrix.toarray of &lt;190x23 sparse matrix of type &#39;&lt;class &#39;numpy.float64&#39;&gt;&#39;
+	with 307 stored elements in Compressed Sparse Column format&gt;&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">vektorkalimat</span><span class="o">=</span><span class="n">normal_matrix</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
+<span class="n">A</span><span class="o">=</span><span class="n">vektorkalimat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">B</span><span class="o">=</span><span class="n">vektorkalimat</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">dot</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="n">B</span><span class="p">)</span>
+<span class="n">norma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">normb</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">norm</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+<span class="n">cos</span> <span class="o">=</span> <span class="n">dot</span> <span class="o">/</span> <span class="p">(</span><span class="n">norma</span> <span class="o">*</span> <span class="n">normb</span><span class="p">)</span>
+<span class="n">cos</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res_graph</span> <span class="o">=</span> <span class="n">normal_matrix</span> <span class="o">*</span> <span class="n">normal_matrix</span><span class="o">.</span><span class="n">T</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  (0, 22)	0.025566308767500254
+  (0, 16)	0.11471207961125757
+  (0, 3)	0.13876487256060271
+  (0, 17)	0.10395427305068175
+  (0, 14)	0.10919383432583211
+  (0, 12)	0.11287972626945715
+  (0, 19)	0.031007810286875492
+  (0, 18)	0.033146144688153634
+  (0, 15)	0.09249434546722939
+  (0, 13)	0.11637361701026366
+  (0, 11)	0.026596352277845604
+  (0, 10)	0.028386970966304294
+  (0, 5)	0.06390118158031745
+  (0, 0)	1.0000000000000002
+  (1, 6)	0.11588210472083527
+  (1, 22)	0.0597176197720335
+  (1, 3)	0.12032428292824637
+  (1, 13)	0.06166000473879879
+  (1, 5)	0.24561227864247825
+  (1, 12)	0.05456116774846179
+  (1, 11)	0.19252396016413514
+  (1, 2)	0.09488084130125826
+  (1, 16)	0.21817252596755116
+  (1, 10)	0.13204977343010105
+  (1, 1)	1.0000000000000002
+  :	:
+  (20, 2)	0.06589152336144553
+  (21, 22)	0.02410337992337943
+  (21, 19)	0.04915698884180279
+  (21, 13)	0.029889118591996125
+  (21, 10)	0.045002146302276336
+  (21, 2)	0.1030124512286968
+  (21, 21)	0.9999999999999998
+  (22, 16)	0.04150742353480516
+  (22, 0)	0.025566308767500254
+  (22, 20)	0.04476150671481654
+  (22, 18)	0.05920437945556474
+  (22, 15)	0.02222534078382322
+  (22, 14)	0.011700066030738237
+  (22, 12)	0.010720203546167584
+  (22, 6)	0.019274276843884122
+  (22, 5)	0.02443986834869674
+  (22, 3)	0.055538586050087296
+  (22, 1)	0.0597176197720335
+  (22, 17)	0.06287033010285491
+  (22, 21)	0.02410337992337943
+  (22, 19)	0.026544148904736418
+  (22, 13)	0.024568768926914668
+  (22, 10)	0.37004031698284534
+  (22, 2)	0.0729602952595279
+  (22, 22)	0.9999999999999996
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+<span class="n">nx_graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">from_scipy_sparse_matrix</span><span class="p">(</span><span class="n">res_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">nx</span><span class="o">.</span><span class="n">draw_circular</span><span class="p">(</span><span class="n">nx_graph</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/UTS_2_23_0.png" src="_images/UTS_2_23_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">scores</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">nx_graph</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.88</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="p">)</span>
+<span class="n">scores</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{0: 0.04102601520797107,
+ 1: 0.046193709303957387,
+ 2: 0.04721144738115323,
+ 3: 0.0473778062382811,
+ 4: 0.043478260869565216,
+ 5: 0.05285091862471401,
+ 6: 0.04516032879541129,
+ 7: 0.039584996388584974,
+ 8: 0.0401871830351775,
+ 9: 0.03726555983516907,
+ 10: 0.049260058582454344,
+ 11: 0.039543433148896065,
+ 12: 0.0477577586763726,
+ 13: 0.04804843243654371,
+ 14: 0.047274815358668655,
+ 15: 0.04730532325572324,
+ 16: 0.03625864285458987,
+ 17: 0.04721060669641974,
+ 18: 0.04595354212509582,
+ 19: 0.04067039778960457,
+ 20: 0.036791431063258474,
+ 21: 0.03289698456924931,
+ 22: 0.04069234776313896}
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Persentase Ringkasan</span>
+<span class="c1">#@markdown ---</span>
+<span class="c1">#@markdown ### Tentukan persentase ringkasan : total kalimat:</span>
+<span class="n">persentase_ringkasan</span> <span class="o">=</span> <span class="mi">50</span> <span class="c1">#@param {type:&quot;slider&quot;, min:50, max:90, step:10}</span>
+<span class="c1">#@markdown ---</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">top_sentence</span><span class="o">=</span><span class="p">{</span><span class="n">sentence</span><span class="p">:</span><span class="n">scores</span><span class="p">[</span><span class="n">index</span><span class="p">]</span> <span class="k">for</span> <span class="n">index</span><span class="p">,</span><span class="n">sentence</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">df_pisahkalimat</span><span class="p">[</span><span class="s2">&quot;Berita_Asli&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)}</span>
+
+<span class="n">persentase</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df_pisahkalimat</span><span class="p">[</span><span class="s2">&quot;Berita_Asli&quot;</span><span class="p">])</span><span class="o">*</span><span class="n">persentase_ringkasan</span><span class="o">//</span><span class="mi">100</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah Kalimat pada Ringkasan : &quot;</span><span class="p">,</span><span class="n">persentase</span><span class="p">)</span>
+<span class="n">top</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="nb">sorted</span><span class="p">(</span><span class="n">top_sentence</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">)[:</span><span class="n">persentase</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah Kalimat pada Ringkasan :  11
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ringkasan</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="k">for</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">df_pisahkalimat</span><span class="p">[</span><span class="s2">&quot;Berita_Asli&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">sent</span> <span class="ow">in</span> <span class="n">top</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">ringkasan</span> <span class="o">=</span> <span class="n">ringkasan</span><span class="o">+</span><span class="s2">&quot; &quot;</span><span class="o">+</span><span class="n">sent</span>
+
+<span class="c1">#ringkasan</span>
+<span class="n">perbandingan</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;Teks asli&#39;</span> <span class="p">:</span> <span class="n">berita</span><span class="p">[</span><span class="s2">&quot;Berita_Asli&quot;</span><span class="p">],</span> <span class="s1">&#39;Hasil Ringkasan&#39;</span> <span class="p">:</span> <span class="p">[</span><span class="n">ringkasan</span><span class="p">]}</span>
+<span class="n">df_perbandingan</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">perbandingan</span><span class="p">)</span>
+<span class="n">df_perbandingan</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-35839a96-0a08-4a0b-83d8-d69936903971">
+    <div class="colab-df-container">
+      <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Teks asli</th>
+      <th>Hasil Ringkasan</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>tempo.co, jakarta - liverpool mendapat pukulan...</td>
+      <td>the reds harus kehilangan pemain sayap, luis ...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+      <button class="colab-df-convert" onclick="convertToInteractive('df-35839a96-0a08-4a0b-83d8-d69936903971')"
+              title="Convert this dataframe to an interactive table."
+              style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M0 0h24v24H0V0z" fill="none"/>
+    <path d="M18.56 5.44l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94z"/><path d="M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z"/>
+  </svg>
+      </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+      <script>
+        const buttonEl =
+          document.querySelector('#df-35839a96-0a08-4a0b-83d8-d69936903971 button.colab-df-convert');
+        buttonEl.style.display =
+          google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+        async function convertToInteractive(key) {
+          const element = document.querySelector('#df-35839a96-0a08-4a0b-83d8-d69936903971');
+          const dataTable =
+            await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                     [key], {});
+          if (!dataTable) return;
+
+          const docLinkHtml = 'Like what you see? Visit the ' +
+            '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+            + ' to learn more about interactive tables.';
+          element.innerHTML = '';
+          dataTable['output_type'] = 'display_data';
+          await google.colab.output.renderOutput(dataTable, element);
+          const docLink = document.createElement('div');
+          docLink.innerHTML = docLinkHtml;
+          element.appendChild(docLink);
+        }
+      </script>
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">SOAL NOMER 1 K-Means Data Tweet</p>
+        </div>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Sayyidi Makhdum<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>
