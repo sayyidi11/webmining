@@ -1,11 +1,9 @@
-# Welcome to your Jupyter Book
+# *PROFIL*
 
-This is a small sample book to give you a feel for how book content is
-structured.
-It shows off a few of the major file types, as well as some sample content.
-It does not go in-depth into any particular topic - check out [the Jupyter Book documentation](https://jupyterbook.org) for more information.
+Selamat datang di buku tugas Pencarian Penambangan Data Web,perkenalkan saya Sayyidi Makhdum dengan NIM 190411100159 dari Kelas PPW A
 
-Check out the content pages bundled with this sample book to see more.
+*Web Mining*
 
-```{tableofcontents}
-```
+Web mining (atau data mining web) adalah proses menemukan hubungan intrinsic (misalkan, informasi yang menarik dan bermanfaat) dari data web, yang disajikan dalam bentuk teks, link, atau informasi penggunaan. Istilah web mining pertama kali digunakaan oleh Etzioni pada tahun 1996 (pakar data mining); saat ini, banyak konferensi, jurnal, dan buku berfokus pada data mining web. Ini memang area teknologi dan praktik bisnis yang berevolusi secara kontinyu. Gambar di bawah ini adalah tiga area utama web mining: konten web, struktur web, dan penggunaan web.
+
+{tableofcontents}
