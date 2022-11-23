@@ -50,8 +50,6 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="UTS SOAL NOMOR 1 K-Means Data Tweet" href="notebooks.html" />
@@ -477,7 +475,7 @@ title="Print to PDF"
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="kn">import</span> <span class="n">TfidfTransformer</span><span class="p">,</span> <span class="n">TfidfVectorizer</span><span class="p">,</span> <span class="n">CountVectorizer</span>
 <span class="c1">#Membuat Dataframe</span>
-<span class="n">dataTextPre</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;hasil_tweet_anis.csv&#39;</span><span class="p">)</span>
+<span class="n">dataTextPre</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/webmining/hasil_preprocessing_piala-dunia.csv&#39;</span><span class="p">)</span>
 
 <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">min_df</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">bag</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dataTextPre</span><span class="p">[</span><span class="s1">&#39;tweet&#39;</span><span class="p">])</span>
@@ -488,7 +486,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5422d7fa-6aed-492a-ba36-a8f3229c2759">
+  <div id="df-77a515c9-c7d4-4bd1-abba-30a71422ac70">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -515,298 +513,258 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>['tweet', 'solo', 'numpang', 'citra', 'kader',...</td>
-      <td>kontra</td>
+      <td>['piala', 'dunia', 'selenggara', 'qatar', 'min...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>['dukung', 'main', 'play', 'victim', 'sesuai',...</td>
-      <td>pro</td>
+      <td>['world', 'cup', 'rabu', 'november', 'marocco'...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>['putra', 'asli', 'cianjur', 'anies']</td>
-      <td>pro</td>
+      <td>['hasil', 'tanding', 'skor', 'piala', 'dunia',...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>['asmara', 'seknasri', 'ok', 'aku', 'sbg', 'ce...</td>
-      <td>pro</td>
+      <td>['sepatu', 'emas', 'pakai', 'lionel', 'messi',...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>['serah', 'beliau', 'fleksibel']</td>
-      <td>pro</td>
+      <td>['jepang', 'parah', 'trauma', 'jerman', 'tim',...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>5</th>
-      <td>['mantab']</td>
-      <td>kontra</td>
+      <td>['jadwal', 'piala', 'dunia', 'rabu', 'nov', 'w...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>['juang', 'uang', 'amp', 'tenagapartai', 'amp'...</td>
-      <td>pro</td>
+      <td>['hasil', 'piala', 'dunia', 'bahagia', 'arab',...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>7</th>
-      <td>['kerja', 'tebar', 'benci', 'perintah', 'sah',...</td>
-      <td>pro</td>
+      <td>['world', 'cup', 'belgium', 'canada', 'kamis',...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>8</th>
-      <td>['sakit', 'hati', 'dukung', 'ahok', 'simulut',...</td>
-      <td>kontra</td>
+      <td>['misi', 'wajib', 'menang', 'timnas', 'jerman'...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>9</th>
-      <td>['asmara', 'seknasri', 'margin', 'error', 'dat...</td>
-      <td>pro</td>
+      <td>['jadwal', 'piala', 'dunia', 'agen', 'judi', '...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>['orang', 'asli', 'cianjur', 'anies', 'gercep']</td>
-      <td>kontra</td>
+      <td>['main', 'bukti', 'tajam', 'piala', 'dunia']</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>11</th>
-      <td>['sempat', 'baik', 'tulusikhlas', 'politik', '...</td>
-      <td>kontra</td>
+      <td>['rungkat', 'dana', 'ganti', 'rugi', 'klaim', ...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>['ane', 'abah']</td>
-      <td>pro</td>
+      <td>['rungkat', 'dana', 'ganti', 'rugi', 'klaim', ...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>[]</td>
-      <td>pro</td>
+      <td>['rungkat', 'dana', 'ganti', 'rugi', 'klaim', ...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>14</th>
-      <td>['aniesid', 'kaga', 'empati', 'nya', 'dukung',...</td>
-      <td>pro</td>
+      <td>['rungkat', 'dana', 'ganti', 'rugi', 'klaim', ...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>15</th>
-      <td>['rakyat', 'rasa', 'hidup', 'maju', 'nikmat', ...</td>
-      <td>kontra</td>
+      <td>['cewe', 'rungkat', 'dana', 'ganti', 'rugi', '...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>16</th>
-      <td>['dengar', 'tantang', 'hadap', 'masyarakat', '...</td>
-      <td>pro</td>
+      <td>['rungkat', 'dana', 'ganti', 'rugi', 'klaim', ...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>17</th>
-      <td>['knpa', 'suku', 'genjeeer', 'tukang', 'hoaxxx...</td>
-      <td>pro</td>
+      <td>['deret', 'maskot', 'gemas', 'piala', 'dunia',...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>18</th>
-      <td>['gimana', 'ibadah', 'masjid', 'kalo', 'ibadah...</td>
-      <td>pro</td>
+      <td>['perintah', 'kerja', 'swasta', 'negeri', 'aja...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>19</th>
-      <td>[]</td>
-      <td>kontra</td>
+      <td>['deret', 'main', 'juluk', 'mahal', 'piala', '...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>20</th>
-      <td>['sumbawa', 'setia', 'dukung', 'pkanies']</td>
-      <td>pro</td>
+      <td>['jadwal', 'world', 'cup', 'malam', 'jerman', ...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>21</th>
-      <td>['umat', 'kadrun']</td>
-      <td>pro</td>
+      <td>['lawan', 'timnas', 'prancis', 'piala', 'dunia...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>22</th>
-      <td>['asmara', 'seknasri', 'iya', 'zaman', 'udah',...</td>
-      <td>pro</td>
+      <td>['hansi', 'flick', 'kecewa', 'leroy', 'sane', ...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>23</th>
-      <td>['ratus', 'video', 'dinas', 'sda', 'dki', 'ker...</td>
-      <td>pro</td>
+      <td>['piala', 'dunia', 'spanyol', 'kosta', 'rika',...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>[]</td>
-      <td>pro</td>
+      <td>['hasil', 'tanding', 'piala', 'dunia', 'qatar'...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>['loveagever', 'kaya', 'bunglon', 'dweehh']</td>
-      <td>pro</td>
+      <td>['jadwal', 'piala', 'dunia', 'rabu', 'nov', 'w...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>26</th>
-      <td>['loveagever', 'kadal', 'gurun', 'bunglon', 'g...</td>
-      <td>pro</td>
+      <td>['antusias', 'piala', 'dunia', 'dana', 'gelont...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>[]</td>
-      <td>kontra</td>
+      <td>['makna', 'piala', 'dunia', 'hadir', 'italia',...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>28</th>
-      <td>['fobia', 'takut', 'sg', 'suara', 'takbir', 'y...</td>
-      <td>pro</td>
+      <td>['madiun', 'bola', 'piala', 'dunia', 'qatar', ...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>29</th>
-      <td>['asmara', 'seknasri', 'sistem', 'nya', 'pisah...</td>
-      <td>pro</td>
+      <td>['makna', 'piala', 'dunia', 'hadir', 'italia',...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>30</th>
-      <td>['bengkalai', 'jaman']</td>
-      <td>pro</td>
+      <td>['piala', 'dunia', 'maroko', 'kroasia', 'sore'...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>31</th>
-      <td>['sampe', 'rawan', 'malakukan', 'rawan', 'sump...</td>
-      <td>kontra</td>
+      <td>['piala', 'dunia', 'maroko', 'kroasia', 'sore'...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>32</th>
-      <td>['ambyarrr', 'apbn']</td>
-      <td>pro</td>
+      <td>['sosok', 'presiden', 'otoritas', 'palestina',...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>33</th>
-      <td>['bah']</td>
-      <td>kontra</td>
+      <td>['main', 'legenda', 'messi', 'tertawa', 'lihat...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>34</th>
-      <td>['salah', 'buzzer', 'doyan', 'fitnah', 'cuit',...</td>
-      <td>pro</td>
+      <td>['messi', 'tanggung', 'malu', 'kumpul', 'meme'...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>35</th>
-      <td>['heraaaaaaan', 'ngga', 'lihat', 'nilaiapa', '...</td>
-      <td>pro</td>
+      <td>['perintah', 'kerja', 'swasta', 'negeri', 'aja...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>36</th>
-      <td>['salah', 'buzzer', 'doyan', 'fitnah', 'cuit',...</td>
-      <td>pro</td>
+      <td>['perintah', 'kerja', 'swasta', 'negeri', 'aja...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>37</th>
-      <td>['coba', 'lihat', 'donk', 'realisasi', 'janji'...</td>
-      <td>pro</td>
+      <td>['diketawain', 'ngga', 'tuh', 'ronaldo']</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>38</th>
-      <td>['yes']</td>
-      <td>pro</td>
+      <td>['kejut', 'arabsadi', 'menang', 'lawan', 'arge...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>39</th>
-      <td>['valino', 'valino']</td>
-      <td>pro</td>
+      <td>['sepak', 'bola', 'sukses', 'piala', 'dunia', ...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>40</th>
-      <td>['iyabakal', 'calon', 'presidenttp', 'tidak', ...</td>
-      <td>pro</td>
+      <td>['menang', 'heroik', 'tim', 'asia', 'eropa', '...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>41</th>
-      <td>['program', 'tipu', 'mata', 'cantik', 'bbrp', ...</td>
-      <td>kontra</td>
+      <td>['jadwal', 'tanding', 'piala', 'dunia', 'qatar...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>42</th>
-      <td>['coba', 'cc', 'barangkali', 'tanggap']</td>
-      <td>pro</td>
+      <td>['jadwal', 'piala', 'dunia', 'rabu', 'nov', 'w...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>43</th>
-      <td>['nya', 'calon', 'presiden', 'negara', 'ya']</td>
-      <td>pro</td>
+      <td>['deret', 'main', 'misi', 'khusus', 'angkat', ...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>44</th>
-      <td>[]</td>
-      <td>pro</td>
+      <td>['raja', 'salman', 'umum', 'libur', 'nasional'...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>45</th>
-      <td>['berita', 'nya', 'enggartiasto', 'lukito', 'a...</td>
-      <td>kontra</td>
+      <td>['tambah', 'piala', 'dunia', 'baca', 'berita',...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>46</th>
-      <td>['hahaha', 'si', 'dongok', 'anak', 'buah']</td>
-      <td>pro</td>
+      <td>['menang', 'anggap', 'gugur', 'jikatidak', 'hu...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>47</th>
-      <td>['sajah', 'aja', 'udah', 'ngajak', 'blangsak',...</td>
-      <td>pro</td>
+      <td>['ya', 'klub', 'jago', 'banget', 'eh', 'tim', ...</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>48</th>
-      <td>['kemarin', 'th', 'mana', 'aja', 'cuk']</td>
-      <td>pro</td>
+      <td>['latih', 'asing', 'unjuk', 'gigi', 'piala', '...</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>49</th>
-      <td>['idha', 'asmara', 'nasdem', 'pranandasp', 'pa...</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>['gerombol', 'dukung', 'orang', 'alam', 'nyolo...</td>
-      <td>kontra</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>['lebihny', 'ribu']</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>['asmara', 'seknasri', 'tugas', 'dinas', 'dukc...</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>['pro', 'cnu']</td>
-      <td>kontra</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>['manusia', 'sampah', 'kerja', 'nya', 'tebar',...</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>['sir']</td>
-      <td>kontra</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>['uyok', 'aji', 'elu', 'dongok', 'ya', 'aji', ...</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>['pan', 'gerindra', 'adl', 'parpol', 'akn', 't...</td>
-      <td>pro</td>
+      <td>['world', 'cup', 'germany', 'japan', 'rabu', '...</td>
+      <td>Pro</td>
     </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-5422d7fa-6aed-492a-ba36-a8f3229c2759')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-77a515c9-c7d4-4bd1-abba-30a71422ac70')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -857,12 +815,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-5422d7fa-6aed-492a-ba36-a8f3229c2759 button.colab-df-convert');
+          document.querySelector('#df-77a515c9-c7d4-4bd1-abba-30a71422ac70 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-5422d7fa-6aed-492a-ba36-a8f3229c2759');
+          const element = document.querySelector('#df-77a515c9-c7d4-4bd1-abba-30a71422ac70');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -892,7 +850,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(58, 347)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(50, 200)
 </pre></div>
 </div>
 </div>
@@ -905,21 +863,15 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+       0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
        0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
-       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0])
+       0, 0])
 </pre></div>
 </div>
 </div>
@@ -947,11 +899,11 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>58
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>50
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-f193a326-0c2b-46e9-9263-af3e753a2dce">
+  <div id="df-c0b669cf-4bac-49fb-a3f8-e814e0a61c7c">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -971,27 +923,27 @@ title="Print to PDF"
   <thead>
     <tr>
       <th></th>
-      <th>abah</th>
-      <th>ach</th>
-      <th>adil</th>
-      <th>adl</th>
-      <th>adlh</th>
-      <th>ahok</th>
-      <th>aja</th>
-      <th>aje</th>
-      <th>aji</th>
-      <th>akibat</th>
+      <th>abbas</th>
+      <th>absen</th>
+      <th>ag</th>
+      <th>agen</th>
+      <th>ajar</th>
+      <th>al</th>
+      <th>amerika</th>
+      <th>amp</th>
+      <th>anggap</th>
+      <th>angkat</th>
       <th>...</th>
-      <th>victim</th>
-      <th>video</th>
-      <th>warga</th>
-      <th>wujud</th>
+      <th>tunggu</th>
+      <th>tunisia</th>
+      <th>umum</th>
+      <th>unjuk</th>
+      <th>uruguay</th>
+      <th>wa</th>
+      <th>wajib</th>
+      <th>wib</th>
+      <th>world</th>
       <th>ya</th>
-      <th>yaa</th>
-      <th>yes</th>
-      <th>yth</th>
-      <th>yudohusodo</th>
-      <th>zaman</th>
     </tr>
   </thead>
   <tbody>
@@ -1012,7 +964,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1032,15 +984,15 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
     </tr>
     <tr>
@@ -1061,7 +1013,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1084,7 +1036,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1135,7 +1087,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -1148,12 +1100,12 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>...</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1183,8 +1135,8 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
+      <td>1</td>
       <td>0</td>
     </tr>
     <tr>
@@ -1194,11 +1146,11 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -1206,7 +1158,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1214,9 +1166,9 @@ title="Print to PDF"
     <tr>
       <th>10</th>
       <td>0</td>
+      <td>0</td>
+      <td>1</td>
       <td>2</td>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1279,13 +1231,13 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
       <th>13</th>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1339,7 +1291,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1359,7 +1311,7 @@ title="Print to PDF"
       <th>16</th>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1371,7 +1323,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1421,7 +1373,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1433,7 +1385,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1495,8 +1447,8 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
+      <td>1</td>
       <td>0</td>
     </tr>
     <tr>
@@ -1526,7 +1478,7 @@ title="Print to PDF"
     <tr>
       <th>23</th>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1540,12 +1492,12 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
+      <td>0</td>
     </tr>
     <tr>
       <th>24</th>
@@ -1561,7 +1513,7 @@ title="Print to PDF"
       <td>0</td>
       <td>...</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1615,7 +1567,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -1632,7 +1584,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1674,7 +1626,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1684,7 +1636,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1735,7 +1687,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -1759,13 +1711,13 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
     </tr>
     <tr>
       <th>33</th>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1841,7 +1793,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1865,7 +1817,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1898,7 +1850,7 @@ title="Print to PDF"
       <td>...</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1926,7 +1878,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -1963,7 +1915,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2023,7 +1975,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -2038,7 +1990,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -2066,7 +2018,7 @@ title="Print to PDF"
       <td>...</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2081,7 +2033,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>2</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2096,7 +2048,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
     </tr>
     <tr>
@@ -2109,7 +2061,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>...</td>
       <td>0</td>
@@ -2131,7 +2083,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2145,7 +2097,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>49</th>
@@ -2155,7 +2107,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2163,7 +2115,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -2191,207 +2143,15 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
-      <td>3</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>58</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
     </tr>
   </tbody>
 </table>
-<p>58 rows × 347 columns</p>
+<p>50 rows × 200 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-f193a326-0c2b-46e9-9263-af3e753a2dce')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-c0b669cf-4bac-49fb-a3f8-e814e0a61c7c')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -2442,12 +2202,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-f193a326-0c2b-46e9-9263-af3e753a2dce button.colab-df-convert');
+          document.querySelector('#df-c0b669cf-4bac-49fb-a3f8-e814e0a61c7c button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-f193a326-0c2b-46e9-9263-af3e753a2dce');
+          const element = document.querySelector('#df-c0b669cf-4bac-49fb-a3f8-e814e0a61c7c');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -2480,7 +2240,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-01587964-74d8-4475-ac37-2dff9731fcd0">
+  <div id="df-e097a333-ebae-4a41-8fd2-2d3de831eb9b">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -2511,16 +2271,16 @@ title="Print to PDF"
       <th>8</th>
       <th>9</th>
       <th>...</th>
-      <th>337</th>
-      <th>338</th>
-      <th>339</th>
-      <th>340</th>
-      <th>341</th>
-      <th>342</th>
-      <th>343</th>
-      <th>344</th>
-      <th>345</th>
-      <th>346</th>
+      <th>190</th>
+      <th>191</th>
+      <th>192</th>
+      <th>193</th>
+      <th>194</th>
+      <th>195</th>
+      <th>196</th>
+      <th>197</th>
+      <th>198</th>
+      <th>199</th>
     </tr>
   </thead>
   <tbody>
@@ -2531,19 +2291,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.254318</td>
+      <td>0.00000</td>
       <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2555,21 +2315,21 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
-      <td>0.379547</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.249342</td>
       <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.00000</td>
+      <td>0.334143</td>
       <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.229192</td>
+      <td>0.289614</td>
       <td>0.000000</td>
     </tr>
     <tr>
@@ -2579,19 +2339,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.303558</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2603,19 +2363,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.219297</td>
+      <td>0.00000</td>
       <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2627,19 +2387,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2651,20 +2411,20 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.525085</td>
       <td>0.000000</td>
       <td>0.000000</td>
     </tr>
@@ -2675,19 +2435,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
+      <td>0.310653</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
+      <td>0.310653</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2699,21 +2459,21 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.208377</td>
+      <td>0.263312</td>
       <td>0.000000</td>
     </tr>
     <tr>
@@ -2723,19 +2483,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.215438</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.215438</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.400186</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2743,23 +2503,23 @@ title="Print to PDF"
     <tr>
       <th>9</th>
       <td>0.000000</td>
-      <td>0.482937</td>
+      <td>0.000000</td>
+      <td>0.265206</td>
+      <td>0.530412</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2771,19 +2531,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2795,43 +2555,43 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.273629</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>0.707107</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2843,19 +2603,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2867,19 +2627,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.239478</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2888,22 +2648,22 @@ title="Print to PDF"
       <th>15</th>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.319054</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.319054</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2915,19 +2675,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2939,19 +2699,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
-      <td>0.408248</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2962,20 +2722,20 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.408248</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -2987,19 +2747,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3011,21 +2771,21 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.208716</td>
+      <td>0.263740</td>
       <td>0.000000</td>
     </tr>
     <tr>
@@ -3035,19 +2795,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3055,26 +2815,26 @@ title="Print to PDF"
     <tr>
       <th>22</th>
       <td>0.000000</td>
+      <td>0.320102</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.227660</td>
-      <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.346542</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
       <th>23</th>
@@ -3083,19 +2843,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
-      <td>0.336999</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3107,19 +2867,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3131,20 +2891,20 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.525085</td>
       <td>0.000000</td>
       <td>0.000000</td>
     </tr>
@@ -3155,19 +2915,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
+      <td>0.385941</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3179,19 +2939,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3203,19 +2963,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.33482</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.235412</td>
+      <td>0.00000</td>
       <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3227,19 +2987,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3251,20 +3011,20 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.387609</td>
       <td>0.000000</td>
       <td>0.000000</td>
     </tr>
@@ -3275,43 +3035,43 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.387609</td>
       <td>0.000000</td>
       <td>0.000000</td>
     </tr>
     <tr>
       <th>32</th>
+      <td>0.320141</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3323,19 +3083,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3347,19 +3107,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3370,20 +3130,20 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.408248</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3394,20 +3154,20 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.408248</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3419,19 +3179,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.276327</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3443,19 +3203,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>1.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3467,19 +3227,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3491,19 +3251,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
+      <td>0.370721</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3515,19 +3275,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3539,20 +3299,20 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
+      <td>0.525085</td>
       <td>0.000000</td>
       <td>0.000000</td>
     </tr>
@@ -3563,19 +3323,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.39551</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.350635</td>
+      <td>0.39551</td>
       <td>0.000000</td>
-      <td>0.0</td>
+      <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3587,19 +3347,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.348249</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3610,22 +3370,22 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.347681</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
-      <td>0.173841</td>
+      <td>0.000000</td>
       <td>0.000000</td>
     </tr>
     <tr>
@@ -3635,19 +3395,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.330352</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3659,22 +3419,22 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.306759</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.364723</td>
     </tr>
     <tr>
       <th>48</th>
@@ -3683,19 +3443,19 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.387979</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.389993</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
@@ -3707,220 +3467,28 @@ title="Print to PDF"
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.00000</td>
       <td>...</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
       <td>0.000000</td>
+      <td>0.00000</td>
       <td>0.000000</td>
       <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.146454</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.134768</td>
-      <td>0.404305</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.088536</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.306466</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>...</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
-      <td>0.0</td>
-      <td>0.000000</td>
-      <td>0.000000</td>
+      <td>0.214565</td>
+      <td>0.271131</td>
       <td>0.000000</td>
     </tr>
   </tbody>
 </table>
-<p>58 rows × 347 columns</p>
+<p>50 rows × 200 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-01587964-74d8-4475-ac37-2dff9731fcd0')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-e097a333-ebae-4a41-8fd2-2d3de831eb9b')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -3971,12 +3539,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-01587964-74d8-4475-ac37-2dff9731fcd0 button.colab-df-convert');
+          document.querySelector('#df-e097a333-ebae-4a41-8fd2-2d3de831eb9b button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-01587964-74d8-4475-ac37-2dff9731fcd0');
+          const element = document.querySelector('#df-e097a333-ebae-4a41-8fd2-2d3de831eb9b');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -4014,14 +3582,12 @@ title="Print to PDF"
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-55dd7bef-7254-42af-8f22-8dd4a7ed24c9">
+  <div id="df-983c2f83-ea16-4fbe-95d3-001de6b9850a">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -4047,7 +3613,7 @@ title="Print to PDF"
   <tbody>
     <tr>
       <th>0</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
@@ -4055,11 +3621,11 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>2</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>4</th>
@@ -4067,11 +3633,11 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>5</th>
-      <td>0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>6</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>7</th>
@@ -4083,11 +3649,11 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>9</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>10</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>11</th>
@@ -4115,7 +3681,7 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>17</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>18</th>
@@ -4123,15 +3689,15 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>19</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>20</th>
-      <td>0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>21</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>22</th>
@@ -4139,47 +3705,47 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>23</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>24</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>25</th>
-      <td>0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>26</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>27</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>28</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>29</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>30</th>
-      <td>0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>31</th>
-      <td>0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>32</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>33</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>34</th>
@@ -4203,31 +3769,31 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>39</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>40</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>41</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>42</th>
-      <td>0</td>
+      <td>2</td>
     </tr>
     <tr>
       <th>43</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>44</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>45</th>
-      <td>2</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>46</th>
@@ -4239,48 +3805,16 @@ title="Print to PDF"
     </tr>
     <tr>
       <th>48</th>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>49</th>
       <td>0</td>
     </tr>
-    <tr>
-      <th>50</th>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>1</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>0</td>
-    </tr>
   </tbody>
 </table>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-55dd7bef-7254-42af-8f22-8dd4a7ed24c9')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-983c2f83-ea16-4fbe-95d3-001de6b9850a')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -4331,12 +3865,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-55dd7bef-7254-42af-8f22-8dd4a7ed24c9 button.colab-df-convert');
+          document.querySelector('#df-983c2f83-ea16-4fbe-95d3-001de6b9850a button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-55dd7bef-7254-42af-8f22-8dd4a7ed24c9');
+          const element = document.querySelector('#df-983c2f83-ea16-4fbe-95d3-001de6b9850a');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -4362,7 +3896,7 @@ title="Print to PDF"
 <h1>Menambahkan Label Pada Hasil TF<a class="headerlink" href="#menambahkan-label-pada-hasil-tf" title="Permalink to this headline">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datalabel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/webmining/hasil_tweet_anis.csv&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">datalabel</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/webmining/hasil_preprocessing_piala-dunia.csv&#39;</span><span class="p">)</span>
 <span class="n">dataJurnal</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dataTF</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span> <span class="n">datalabel</span><span class="p">[</span><span class="s2">&quot;labels&quot;</span><span class="p">]],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">dataJurnal</span>
 </pre></div>
@@ -4370,7 +3904,7 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7ba541b4-859f-4344-9e5f-7d9737e09d7a">
+  <div id="df-d1b56b3d-6625-4002-987b-6c3a5be18dbe">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -4390,26 +3924,26 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>(abah,)</th>
-      <th>(ach,)</th>
-      <th>(adil,)</th>
-      <th>(adl,)</th>
-      <th>(adlh,)</th>
-      <th>(ahok,)</th>
-      <th>(aja,)</th>
-      <th>(aje,)</th>
-      <th>(aji,)</th>
-      <th>(akibat,)</th>
+      <th>(abbas,)</th>
+      <th>(absen,)</th>
+      <th>(ag,)</th>
+      <th>(agen,)</th>
+      <th>(ajar,)</th>
+      <th>(al,)</th>
+      <th>(amerika,)</th>
+      <th>(amp,)</th>
+      <th>(anggap,)</th>
+      <th>(angkat,)</th>
       <th>...</th>
-      <th>(video,)</th>
-      <th>(warga,)</th>
-      <th>(wujud,)</th>
+      <th>(tunisia,)</th>
+      <th>(umum,)</th>
+      <th>(unjuk,)</th>
+      <th>(uruguay,)</th>
+      <th>(wa,)</th>
+      <th>(wajib,)</th>
+      <th>(wib,)</th>
+      <th>(world,)</th>
       <th>(ya,)</th>
-      <th>(yaa,)</th>
-      <th>(yes,)</th>
-      <th>(yth,)</th>
-      <th>(yudohusodo,)</th>
-      <th>(zaman,)</th>
       <th>labels</th>
     </tr>
   </thead>
@@ -4430,13 +3964,13 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>kontra</td>
+      <td>0</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>1</th>
@@ -4454,13 +3988,13 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
+      <td>1</td>
+      <td>1</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>2</th>
@@ -4479,12 +4013,12 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>3</th>
@@ -4502,13 +4036,13 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>0</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>4</th>
@@ -4532,7 +4066,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>5</th>
@@ -4553,10 +4087,10 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>kontra</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>6</th>
@@ -4567,10 +4101,11 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>...</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -4579,8 +4114,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>7</th>
@@ -4601,10 +4135,10 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>1</td>
+      <td>1</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>8</th>
@@ -4613,26 +4147,28 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>kontra</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>9</th>
       <td>0</td>
+      <td>0</td>
+      <td>1</td>
       <td>2</td>
       <td>0</td>
       <td>0</td>
@@ -4640,8 +4176,6 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -4652,7 +4186,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>10</th>
@@ -4676,7 +4210,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>kontra</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>11</th>
@@ -4697,14 +4231,14 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
-      <td>kontra</td>
+      <td>0</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -4724,7 +4258,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>13</th>
@@ -4748,7 +4282,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>14</th>
@@ -4758,7 +4292,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -4772,13 +4306,13 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>15</th>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -4789,14 +4323,14 @@ title="Print to PDF"
       <td>...</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>kontra</td>
+      <td>0</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>16</th>
@@ -4820,7 +4354,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>17</th>
@@ -4839,12 +4373,12 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>0</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>18</th>
@@ -4852,7 +4386,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -4868,7 +4402,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>19</th>
@@ -4892,7 +4426,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>kontra</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>20</th>
@@ -4913,10 +4447,10 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>1</td>
+      <td>1</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>21</th>
@@ -4940,12 +4474,12 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>22</th>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -4958,13 +4492,13 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
-      <td>pro</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>23</th>
@@ -4979,7 +4513,6 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -4988,7 +4521,8 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>0</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>24</th>
@@ -5012,7 +4546,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>25</th>
@@ -5033,10 +4567,10 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>26</th>
@@ -5060,7 +4594,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>27</th>
@@ -5084,7 +4618,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>kontra</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>28</th>
@@ -5093,7 +4627,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -5102,13 +4636,13 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>0</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>29</th>
@@ -5132,7 +4666,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>30</th>
@@ -5153,10 +4687,10 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>31</th>
@@ -5177,14 +4711,14 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>kontra</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>32</th>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -5204,7 +4738,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>33</th>
@@ -5228,7 +4762,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>kontra</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>34</th>
@@ -5252,7 +4786,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>35</th>
@@ -5260,7 +4794,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -5276,7 +4810,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>36</th>
@@ -5284,7 +4818,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -5300,7 +4834,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>37</th>
@@ -5316,7 +4850,6 @@ title="Print to PDF"
       <td>0</td>
       <td>...</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -5324,7 +4857,8 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>0</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>38</th>
@@ -5344,11 +4878,11 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>0</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>39</th>
@@ -5372,7 +4906,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>40</th>
@@ -5382,7 +4916,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -5396,7 +4930,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>41</th>
@@ -5420,7 +4954,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>kontra</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>42</th>
@@ -5441,10 +4975,10 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>43</th>
@@ -5457,7 +4991,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -5468,7 +5002,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>44</th>
@@ -5484,6 +5018,7 @@ title="Print to PDF"
       <td>0</td>
       <td>...</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -5491,8 +5026,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>45</th>
@@ -5500,7 +5034,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>2</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -5514,9 +5048,9 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
-      <td>kontra</td>
+      <td>0</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>46</th>
@@ -5528,7 +5062,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>...</td>
       <td>0</td>
@@ -5540,7 +5074,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>47</th>
@@ -5550,7 +5084,7 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -5563,8 +5097,8 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>1</td>
+      <td>Pro</td>
     </tr>
     <tr>
       <th>48</th>
@@ -5574,21 +5108,21 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Kontra</td>
     </tr>
     <tr>
       <th>49</th>
@@ -5609,208 +5143,16 @@ title="Print to PDF"
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>50</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>kontra</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>53</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>kontra</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>55</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>kontra</td>
-    </tr>
-    <tr>
-      <th>56</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>3</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>pro</td>
-    </tr>
-    <tr>
-      <th>57</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>pro</td>
+      <td>Pro</td>
     </tr>
   </tbody>
 </table>
-<p>58 rows × 348 columns</p>
+<p>50 rows × 201 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-7ba541b4-859f-4344-9e5f-7d9737e09d7a')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-d1b56b3d-6625-4002-987b-6c3a5be18dbe')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -5861,12 +5203,12 @@ title="Print to PDF"
 
       <script>
         const buttonEl =
-          document.querySelector('#df-7ba541b4-859f-4344-9e5f-7d9737e09d7a button.colab-df-convert');
+          document.querySelector('#df-d1b56b3d-6625-4002-987b-6c3a5be18dbe button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-7ba541b4-859f-4344-9e5f-7d9737e09d7a');
+          const element = document.querySelector('#df-d1b56b3d-6625-4002-987b-6c3a5be18dbe');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -5894,7 +5236,7 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;kontra&#39;, &#39;pro&#39;], dtype=object)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([&#39;Pro&#39;, &#39;Kontra&#39;], dtype=object)
 </pre></div>
 </div>
 </div>
@@ -5907,10 +5249,10 @@ title="Print to PDF"
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
-RangeIndex: 58 entries, 0 to 57
-Columns: 348 entries, (&#39;abah&#39;,) to labels
-dtypes: int64(347), object(1)
-memory usage: 157.8+ KB
+RangeIndex: 50 entries, 0 to 49
+Columns: 201 entries, (&#39;abbas&#39;,) to labels
+dtypes: int64(200), object(1)
+memory usage: 78.6+ KB
 </pre></div>
 </div>
 </div>
@@ -5938,7 +5280,7 @@ memory usage: 157.8+ KB
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-4ada2096-c4f8-44a5-995d-f14ed9bb96fa">
+  <div id="df-ce55fec8-a377-4c9f-af55-d89a0fd76f05">
     <div class="colab-df-container">
       <div>
 <style scoped>
@@ -5958,30 +5300,54 @@ memory usage: 157.8+ KB
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>(abah,)</th>
-      <th>(ach,)</th>
-      <th>(adil,)</th>
-      <th>(adl,)</th>
-      <th>(adlh,)</th>
-      <th>(ahok,)</th>
-      <th>(aja,)</th>
-      <th>(aje,)</th>
-      <th>(aji,)</th>
-      <th>(akibat,)</th>
+      <th>(abbas,)</th>
+      <th>(absen,)</th>
+      <th>(ag,)</th>
+      <th>(agen,)</th>
+      <th>(ajar,)</th>
+      <th>(al,)</th>
+      <th>(amerika,)</th>
+      <th>(amp,)</th>
+      <th>(anggap,)</th>
+      <th>(angkat,)</th>
       <th>...</th>
-      <th>(victim,)</th>
-      <th>(video,)</th>
-      <th>(warga,)</th>
-      <th>(wujud,)</th>
+      <th>(tunggu,)</th>
+      <th>(tunisia,)</th>
+      <th>(umum,)</th>
+      <th>(unjuk,)</th>
+      <th>(uruguay,)</th>
+      <th>(wa,)</th>
+      <th>(wajib,)</th>
+      <th>(wib,)</th>
+      <th>(world,)</th>
       <th>(ya,)</th>
-      <th>(yaa,)</th>
-      <th>(yes,)</th>
-      <th>(yth,)</th>
-      <th>(yudohusodo,)</th>
-      <th>(zaman,)</th>
     </tr>
   </thead>
   <tbody>
+    <tr>
+      <th>7</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
     <tr>
       <th>14</th>
       <td>0</td>
@@ -5990,30 +5356,6 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>31</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6031,7 +5373,7 @@ memory usage: 157.8+ KB
       <td>0</td>
     </tr>
     <tr>
-      <th>28</th>
+      <th>45</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6047,7 +5389,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6055,7 +5397,7 @@ memory usage: 157.8+ KB
       <td>0</td>
     </tr>
     <tr>
-      <th>56</th>
+      <th>48</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6063,11 +5405,10 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
-      <td>3</td>
+      <td>0</td>
+      <td>0</td>
       <td>0</td>
       <td>...</td>
-      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6077,81 +5418,10 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-    </tr>
-    <tr>
-      <th>52</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>18</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>54</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>26</th>
+      <th>29</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6178,30 +5448,6 @@ memory usage: 157.8+ KB
       <th>15</th>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6225,6 +5471,30 @@ memory usage: 157.8+ KB
     <tr>
       <th>30</th>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6271,7 +5541,7 @@ memory usage: 157.8+ KB
       <td>0</td>
     </tr>
     <tr>
-      <th>49</th>
+      <th>42</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6290,7 +5560,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -6314,12 +5584,12 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
+      <td>1</td>
       <td>0</td>
     </tr>
     <tr>
-      <th>50</th>
+      <th>43</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6329,7 +5599,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -6349,11 +5619,11 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
+      <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -6361,7 +5631,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6410,7 +5680,31 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>2</td>
       <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
       <td>0</td>
       <td>0</td>
     </tr>
@@ -6432,30 +5726,6 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>43</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6463,66 +5733,7 @@ memory usage: 157.8+ KB
       <td>0</td>
     </tr>
     <tr>
-      <th>46</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>51</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>38</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
+      <th>40</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6532,6 +5743,41 @@ memory usage: 157.8+ KB
       <td>1</td>
       <td>0</td>
       <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>1</td>
       <td>0</td>
     </tr>
     <tr>
@@ -6547,20 +5793,20 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
       <td>0</td>
-      <td>0</td>
-      <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
     </tr>
     <tr>
       <th>12</th>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6583,11 +5829,11 @@ memory usage: 157.8+ KB
       <td>0</td>
     </tr>
     <tr>
-      <th>57</th>
+      <th>37</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6639,12 +5885,12 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>...</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6668,7 +5914,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>...</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6684,7 +5930,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6753,9 +5999,9 @@ memory usage: 157.8+ KB
     <tr>
       <th>9</th>
       <td>0</td>
+      <td>0</td>
+      <td>1</td>
       <td>2</td>
-      <td>0</td>
-      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6799,7 +6045,7 @@ memory usage: 157.8+ KB
       <td>0</td>
     </tr>
     <tr>
-      <th>55</th>
+      <th>46</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6808,7 +6054,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>...</td>
       <td>0</td>
@@ -6839,7 +6085,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6848,30 +6094,6 @@ memory usage: 157.8+ KB
     </tr>
     <tr>
       <th>0</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
-      <th>53</th>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6902,7 +6124,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
+      <td>0</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6916,7 +6138,7 @@ memory usage: 157.8+ KB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>44</th>
@@ -6933,7 +6155,7 @@ memory usage: 157.8+ KB
       <td>...</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>1</td>
       <td>0</td>
       <td>0</td>
       <td>0</td>
@@ -6944,9 +6166,9 @@ memory usage: 157.8+ KB
     </tr>
   </tbody>
 </table>
-<p>40 rows × 347 columns</p>
+<p>35 rows × 200 columns</p>
 </div>
-      <button class="colab-df-convert" onclick="convertToInteractive('df-4ada2096-c4f8-44a5-995d-f14ed9bb96fa')"
+      <button class="colab-df-convert" onclick="convertToInteractive('df-ce55fec8-a377-4c9f-af55-d89a0fd76f05')"
               title="Convert this dataframe to an interactive table."
               style="display:none;">
 
@@ -6997,12 +6219,12 @@ memory usage: 157.8+ KB
 
       <script>
         const buttonEl =
-          document.querySelector('#df-4ada2096-c4f8-44a5-995d-f14ed9bb96fa button.colab-df-convert');
+          document.querySelector('#df-ce55fec8-a377-4c9f-af55-d89a0fd76f05 button.colab-df-convert');
         buttonEl.style.display =
           google.colab.kernel.accessAllowed ? 'block' : 'none';
 
         async function convertToInteractive(key) {
-          const element = document.querySelector('#df-4ada2096-c4f8-44a5-995d-f14ed9bb96fa');
+          const element = document.querySelector('#df-ce55fec8-a377-4c9f-af55-d89a0fd76f05');
           const dataTable =
             await google.colab.kernel.invokeFunction('convertToInteractive',
                                                      [key], {});
@@ -7120,63 +6342,63 @@ memory usage: 157.8+ KB
   FutureWarning,
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[array([&#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;], dtype=object),
+ array([&#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;],
        dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+ array([&#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;],
        dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+ array([&#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;],
        dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+ array([&#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;], dtype=object),
+ array([&#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;],
        dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+ array([&#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;],
        dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+ array([&#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;],
        dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+ array([&#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;], dtype=object),
+ array([&#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;],
        dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+ array([&#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;], dtype=object),
+ array([&#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;], dtype=object),
+ array([&#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;], dtype=object),
+ array([&#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;], dtype=object),
+ array([&#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;], dtype=object),
+ array([&#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Pro&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;],
        dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
+ array([&#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;], dtype=object),
+ array([&#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;],
        dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object),
- array([&#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;,
-        &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;, &#39;pro&#39;],
-       dtype=object)]
+ array([&#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;, &#39;Pro&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Pro&#39;,
+        &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;, &#39;Kontra&#39;,
+        &#39;Kontra&#39;], dtype=object)]
 </pre></div>
 </div>
 </div>
@@ -7188,24 +6410,21 @@ memory usage: 157.8+ KB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>35       pro
-34       pro
-42       pro
-27    kontra
-11    kontra
-2        pro
-33    kontra
-45    kontra
-22       pro
-48       pro
-4        pro
-10    kontra
-29       pro
-40       pro
-32       pro
-41    kontra
-37       pro
-7        pro
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28       Pro
+11       Pro
+10    Kontra
+41    Kontra
+2     Kontra
+27       Pro
+38       Pro
+31       Pro
+22       Pro
+4        Pro
+33       Pro
+35    Kontra
+26       Pro
+34       Pro
+18       Pro
 Name: labels, dtype: object
 </pre></div>
 </div>
@@ -7233,65 +6452,63 @@ Name: labels, dtype: object
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
   FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
+/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
+  FutureWarning,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-/usr/local/lib/python3.7/dist-packages/sklearn/utils/validation.py:1692: FutureWarning: Feature names only support names that are all strings. Got feature names with dtypes: [&#39;tuple&#39;]. An error will be raised in 1.2.
-  FutureWarning,
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(2, 66.67),
- (3, 66.67),
- (4, 66.67),
- (5, 66.67),
- (6, 66.67),
- (7, 66.67),
- (8, 66.67),
- (9, 66.67),
- (10, 66.67),
- (11, 66.67),
- (12, 66.67),
- (13, 66.67),
- (14, 66.67),
- (15, 66.67),
- (16, 66.67),
- (17, 66.67),
- (18, 66.67),
- (19, 66.67),
- (20, 66.67)]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[(2, 26.67),
+ (3, 40.0),
+ (4, 33.33),
+ (5, 46.67),
+ (6, 20.0),
+ (7, 40.0),
+ (8, 40.0),
+ (9, 53.33),
+ (10, 40.0),
+ (11, 53.33),
+ (12, 26.67),
+ (13, 33.33),
+ (14, 26.67),
+ (15, 26.67),
+ (16, 20.0),
+ (17, 40.0),
+ (18, 26.67),
+ (19, 40.0),
+ (20, 26.67)]
 </pre></div>
 </div>
 </div>
